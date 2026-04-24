@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="ModbusScope is a free, open-source Modbus data logger and real-time visualizer for Windows and Linux. Supports TCP, RTU, all register types, custom expressions, and CSV export.">
+  <meta name="keywords"
+        content="Modbus, data logging, RTU, TCP, visualization, industrial automation, open source, free">
+  <meta property="og:title" content="ModbusScope - Visual Modbus Data Logging">
+  <meta property="og:description"
+        content="Free open-source GUI for real-time Modbus data logging and visualization.">
+  <meta property="og:image"
+        content="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png">
+  <meta property="og:url" content="https://modbusscope.github.io">
+  <link rel="icon"
+        href="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png"
+        type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <title>ModbusScope - Visual Modbus Data Logging</title>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__inner">
+
+      <a href="#" class="nav__brand">
+        <img
+          src="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png"
+          alt="ModbusScope logo"
+          class="nav__logo"
+          width="32"
+          height="32">
+        <span class="nav__name">ModbusScope</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="https://modbusscope.readthedocs.io" class="nav__link" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
+           class="btn btn-primary nav__cta" target="_blank" rel="noopener">
+          Download
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+
+        <img
+          src="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png"
+          alt="ModbusScope icon"
+          class="hero__icon"
+          width="96"
+          height="96">
+
+        <h1 class="hero__title">ModbusScope</h1>
+
+        <p class="hero__tagline">Visual Modbus Data Logging</p>
+
+        <p class="hero__subtitle">
+          Free, open-source desktop application for real-time logging and visualization
+          of Modbus TCP and RTU data. Built for industrial engineers, energy professionals,
+          and embedded developers.
+        </p>
+
+        <div class="hero__actions">
+          <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
+             class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+            Download v4.2.1
+          </a>
+          <a href="https://modbusscope.readthedocs.io"
+             class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+            Documentation
+          </a>
+          <a href="https://github.com/ModbusScope/ModbusScope"
+             class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+            GitHub
+          </a>
+        </div>
+
+        <div class="hero__badges">
+          <span class="badge">Windows</span>
+          <span class="badge">Linux</span>
+          <span class="badge badge--green">Free and Open Source</span>
+          <span class="badge">GPLv3</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section class="demo" id="demo">
+      <div class="container demo__inner">
+
+        <h2 class="section-title">See It In Action</h2>
+        <p class="section-subtitle">
+          Real-time logging and interactive graph analysis, all in one window.
+        </p>
+
+        <figure class="demo__figure">
+          <img
+            src="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/modbusscope_demo.gif"
+            alt="ModbusScope in action: real-time Modbus data logging and graph visualization"
+            class="demo__gif"
+            loading="lazy">
+          <figcaption class="demo__caption">
+            ModbusScope logging live Modbus data and displaying it as an interactive graph.
+            Place markers to analyze min, max, average, median, and slope over any time range.
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="container">
+
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-subtitle">
+          A complete toolset for Modbus data acquisition and analysis. No license key, no registration, no cost.
+        </p>
+
+        <div class="features__grid">
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">~</div>
+            <h3 class="feature-card__title">Real-Time Visualization</h3>
+            <p class="feature-card__desc">
+              Watch your Modbus registers update live on an interactive graph.
+              Identify transients and trends as they happen, with automatic or
+              sliding-window axis scaling.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">IP</div>
+            <h3 class="feature-card__title">Modbus TCP and RTU</h3>
+            <p class="feature-card__desc">
+              Connect over Ethernet via Modbus TCP or directly to serial hardware
+              via Modbus RTU. Configure multiple connections with independent
+              settings for each.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">Nx</div>
+            <h3 class="feature-card__title">Multiple Devices</h3>
+            <p class="feature-card__desc">
+              Poll multiple Modbus slaves simultaneously. Mix slave IDs and
+              connection types in a single session. Ideal for comparing sensors
+              across a bus or network.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">f(x)</div>
+            <h3 class="feature-card__title">Custom Expressions</h3>
+            <p class="feature-card__desc">
+              Write user-defined formulas to combine, scale, or convert register
+              values. Apply unit conversions, compute power from voltage and
+              current, or implement any derived quantity.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">min</div>
+            <h3 class="feature-card__title">Statistical Analysis</h3>
+            <p class="feature-card__desc">
+              Drag markers to bracket a time range and instantly read min, max,
+              average, median, and slope statistics. Zoom with the scroll wheel
+              to focus on any interval.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">CSV</div>
+            <h3 class="feature-card__title">CSV Export</h3>
+            <p class="feature-card__desc">
+              Export the full logged dataset to CSV for post-processing in Excel,
+              Python, MATLAB, or any analysis tool. All register channels are
+              included with timestamps.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">4x</div>
+            <h3 class="feature-card__title">All Register Types</h3>
+            <p class="feature-card__desc">
+              Supports coils, discrete inputs, input registers, and holding registers,
+              covering the full Modbus object model. Read and log any combination
+              in a single session.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOCOL BAND -->
+    <section class="protocol-band">
+      <div class="container protocol-band__inner">
+
+        <p class="protocol-band__label">Protocol and Register Support</p>
+
+        <div class="protocol-band__items">
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">TCP</span>
+            <span class="protocol-item__text">Modbus TCP/IP</span>
+          </div>
+
+          <div class="protocol-divider" aria-hidden="true"></div>
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">RTU</span>
+            <span class="protocol-item__text">Modbus RTU (Serial)</span>
+          </div>
+
+          <div class="protocol-divider" aria-hidden="true"></div>
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">0x</span>
+            <span class="protocol-item__text">Coils</span>
+          </div>
+
+          <div class="protocol-divider" aria-hidden="true"></div>
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">1x</span>
+            <span class="protocol-item__text">Discrete Inputs</span>
+          </div>
+
+          <div class="protocol-divider" aria-hidden="true"></div>
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">3x</span>
+            <span class="protocol-item__text">Input Registers</span>
+          </div>
+
+          <div class="protocol-divider" aria-hidden="true"></div>
+
+          <div class="protocol-item">
+            <span class="protocol-item__tag">4x</span>
+            <span class="protocol-item__text">Holding Registers</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GET STARTED -->
+    <section class="get-started" id="download">
+      <div class="container get-started__inner">
+
+        <h2 class="get-started__title">Ready to Get Started?</h2>
+        <p class="get-started__subtitle">
+          Download ModbusScope for free and start visualizing your Modbus data
+          in minutes. No registration. No license key. No cost, ever.
+        </p>
+
+        <div class="get-started__actions">
+          <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
+             class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+            Download v4.2.1
+          </a>
+          <a href="https://modbusscope.readthedocs.io/en/stable/pages/overview.html"
+             class="btn btn-outline-white btn-lg" target="_blank" rel="noopener">
+            Getting Started Guide
+          </a>
+        </div>
+
+        <p class="get-started__note">
+          Windows and Linux
+          &nbsp;&middot;&nbsp;
+          GPLv3 License
+          &nbsp;&middot;&nbsp;
+          <a href="https://github.com/ModbusScope/ModbusScope"
+             target="_blank" rel="noopener"
+             class="get-started__note-link">View source on GitHub</a>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <img
+          src="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png"
+          alt="ModbusScope logo"
+          class="footer__logo"
+          width="28"
+          height="28">
+        <span class="footer__name">ModbusScope</span>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer navigation">
+        <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
+           class="footer__link" target="_blank" rel="noopener">Download</a>
+        <a href="https://modbusscope.readthedocs.io"
+           class="footer__link" target="_blank" rel="noopener">Documentation</a>
+        <a href="https://github.com/ModbusScope/ModbusScope"
+           class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/ModbusScope/ModbusScope/issues"
+           class="footer__link" target="_blank" rel="noopener">Report a Bug</a>
+        <a href="https://github.com/ModbusScope/ModbusScope/blob/master/LICENSE"
+           class="footer__link" target="_blank" rel="noopener">License</a>
+      </nav>
+
+      <p class="footer__legal">
+        Released under the
+        <a href="https://github.com/ModbusScope/ModbusScope/blob/master/LICENSE"
+           class="footer__link" target="_blank" rel="noopener">GNU General Public License v3.0</a>.
+        Free to use, modify, and distribute.
+      </p>
+
+      <p class="footer__copyright">
+        &copy; 2026 ModbusScope contributors. Latest release: v4.2.1 (March 2026).
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
