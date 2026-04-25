@@ -6,7 +6,6 @@
       { "message": "Expected BEM-style class selector (block__element--modifier)" }
     ],
     "custom-property-empty-line-before": null,
-    "media-feature-range-notation": "prefix",
     "no-descending-specificity": null
   }
 }
