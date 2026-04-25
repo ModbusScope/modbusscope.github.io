@@ -366,13 +366,13 @@ a:hover {
   margin-bottom: var(--space-8);
 }
 
-.hero .btn-primary {
+:is(.hero, .get-started) .btn-primary {
   background: var(--color-white);
   color: var(--color-primary);
   border-color: var(--color-white);
 }
 
-.hero .btn-primary:hover {
+:is(.hero, .get-started) .btn-primary:hover {
   background: var(--color-bg-alt);
   border-color: var(--color-bg-alt);
   color: var(--color-primary-dark);
@@ -620,19 +620,6 @@ a:hover {
   gap: var(--space-4);
   justify-content: center;
   margin-bottom: var(--space-6);
-}
-
-.get-started .btn-primary {
-  background: var(--color-white);
-  color: var(--color-primary);
-  border-color: var(--color-white);
-}
-
-.get-started .btn-primary:hover {
-  background: var(--color-bg-alt);
-  border-color: var(--color-bg-alt);
-  color: var(--color-primary-dark);
-  box-shadow: var(--shadow-md);
 }
 
 .get-started__note {
