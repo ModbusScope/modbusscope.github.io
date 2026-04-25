@@ -1,0 +1,14 @@
+{
+  "name": "modbusscope-site",
+  "private": true,
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css",
+    "lint:html": "html-validate index.html",
+    "lint:css": "stylelint styles.css"
+  },
+  "devDependencies": {
+    "html-validate": "^10.13.1",
+    "stylelint": "^17.9.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
