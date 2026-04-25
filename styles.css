@@ -68,10 +68,10 @@
   --radius-xl: 16px;
 
   /* Shadows */
-  --shadow-sm:   0 1px 3px rgb(0, 0, 0, 0.08);
-  --shadow-md:   0 4px 12px rgb(0, 0, 0, 0.10);
-  --shadow-lg:   0 8px 24px rgb(0, 0, 0, 0.12);
-  --shadow-card: 0 2px 8px rgb(13, 110, 138, 0.08);
+  --shadow-sm:   0 1px 3px rgb(0 0 0 / 8%);
+  --shadow-md:   0 4px 12px rgb(0 0 0 / 10%);
+  --shadow-lg:   0 8px 24px rgb(0 0 0 / 12%);
+  --shadow-card: 0 2px 8px rgb(13 110 138 / 8%);
 
   /* Transitions */
   --transition-fast:   150ms ease;
@@ -179,11 +179,11 @@ a:hover {
 .btn-outline-white {
   background: transparent;
   color: var(--color-white);
-  border-color: rgb(255, 255, 255, 0.7);
+  border-color: rgb(255 255 255 / 70%);
 }
 
 .btn-outline-white:hover {
-  background: rgb(255, 255, 255, 0.15);
+  background: rgb(255 255 255 / 15%);
   border-color: var(--color-white);
   color: var(--color-white);
 }
@@ -199,18 +199,18 @@ a:hover {
 .badge {
   display: inline-block;
   padding: var(--space-1) var(--space-3);
-  background: rgb(255, 255, 255, 0.15);
-  color: rgb(255, 255, 255, 0.9);
+  background: rgb(255 255 255 / 15%);
+  color: rgb(255 255 255 / 90%);
   border-radius: 999px;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.02em;
-  border: 1px solid rgb(255, 255, 255, 0.25);
+  border: 1px solid rgb(255 255 255 / 25%);
 }
 
 .badge--green {
-  background: rgb(40, 167, 69, 0.35);
-  border-color: rgb(40, 167, 69, 0.5);
+  background: rgb(40 167 69 / 35%);
+  border-color: rgb(40 167 69 / 50%);
 }
 
 /* === SECTION TITLES === */
@@ -326,7 +326,7 @@ a:hover {
   width: 96px;
   height: 96px;
   border-radius: var(--radius-xl);
-  box-shadow: 0 8px 32px rgb(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 25%);
   margin-bottom: var(--space-6);
 }
 
@@ -342,7 +342,7 @@ a:hover {
 .hero__tagline {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-medium);
-  color: rgb(255, 255, 255, 0.85);
+  color: rgb(255 255 255 / 85%);
   margin-bottom: var(--space-6);
   letter-spacing: 0.01em;
 }
@@ -350,7 +350,7 @@ a:hover {
 .hero__subtitle {
   max-width: 600px;
   font-size: var(--font-size-lg);
-  color: rgb(255, 255, 255, 0.75);
+  color: rgb(255 255 255 / 75%);
   line-height: var(--line-height-loose);
   margin-bottom: var(--space-10);
 }
@@ -378,11 +378,11 @@ a:hover {
 
 .hero .btn-outline {
   color: var(--color-white);
-  border-color: rgb(255, 255, 255, 0.6);
+  border-color: rgb(255 255 255 / 60%);
 }
 
 .hero .btn-outline:hover {
-  background: rgb(255, 255, 255, 0.15);
+  background: rgb(255 255 255 / 15%);
   border-color: var(--color-white);
   color: var(--color-white);
 }
@@ -516,8 +516,8 @@ a:hover {
 
 .protocol-band {
   background: var(--color-primary-light);
-  border-top: 1px solid rgb(13, 110, 138, 0.15);
-  border-bottom: 1px solid rgb(13, 110, 138, 0.15);
+  border-top: 1px solid rgb(13 110 138 / 15%);
+  border-bottom: 1px solid rgb(13 110 138 / 15%);
   padding: var(--space-8) 0;
 }
 
@@ -572,7 +572,7 @@ a:hover {
 .protocol-divider {
   width: 1px;
   height: 20px;
-  background: rgb(13, 110, 138, 0.25);
+  background: rgb(13 110 138 / 25%);
 }
 
 @media (max-width: 767px) {
@@ -605,7 +605,7 @@ a:hover {
 
 .get-started__subtitle {
   font-size: var(--font-size-lg);
-  color: rgb(255, 255, 255, 0.8);
+  color: rgb(255 255 255 / 80%);
   max-width: 540px;
   line-height: var(--line-height-loose);
   margin-bottom: var(--space-10);
@@ -634,11 +634,11 @@ a:hover {
 
 .get-started__note {
   font-size: var(--font-size-sm);
-  color: rgb(255, 255, 255, 0.6);
+  color: rgb(255 255 255 / 60%);
 }
 
 .get-started__note-link {
-  color: rgb(255, 255, 255, 0.85);
+  color: rgb(255 255 255 / 85%);
   text-decoration: underline;
 }
 
@@ -681,7 +681,7 @@ a:hover {
 .footer__name {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
-  color: rgb(255, 255, 255, 0.9);
+  color: rgb(255 255 255 / 90%);
   letter-spacing: -0.01em;
 }
 
@@ -699,7 +699,7 @@ a:hover {
 }
 
 .footer__link:hover {
-  color: rgb(255, 255, 255, 0.9);
+  color: rgb(255 255 255 / 90%);
 }
 
 .footer__legal {
@@ -711,8 +711,8 @@ a:hover {
 
 .footer__copyright {
   font-size: var(--font-size-xs);
-  color: rgb(255, 255, 255, 0.3);
-  border-top: 1px solid rgb(255, 255, 255, 0.08);
+  color: rgb(255 255 255 / 30%);
+  border-top: 1px solid rgb(255 255 255 / 8%);
   padding-top: var(--space-4);
   width: 100%;
   text-align: center;

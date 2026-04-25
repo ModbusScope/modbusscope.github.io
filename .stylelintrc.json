@@ -5,8 +5,6 @@
       "^[a-z][a-z0-9-]*(__[a-z][a-z0-9-]*)?(--[a-z][a-z0-9-]*)?$",
       { "message": "Expected BEM-style class selector (block__element--modifier)" }
     ],
-    "color-function-notation": "legacy",
-    "alpha-value-notation": "number",
     "custom-property-empty-line-before": null,
     "media-feature-range-notation": "prefix",
     "no-descending-specificity": null
