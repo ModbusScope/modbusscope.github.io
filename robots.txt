@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://modbusscope.github.io/sitemap.xml
