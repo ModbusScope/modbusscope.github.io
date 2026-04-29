@@ -1,0 +1,55 @@
+name: Update version
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if update is needed
+        id: check
+        run: |
+          current=$(jq -r '.tag_name' updater/version.json)
+          latest=$(curl -fsSL https://api.github.com/repos/ModbusScope/ModbusScope/releases/latest | jq -r '.tag_name')
+          if [ "$current" != "$latest" ]; then
+            echo "needs_update=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needs_update=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run update script
+        if: steps.check.outputs.needs_update == 'true'
+        run: |
+          chmod +x scripts/update_version.sh
+          ./scripts/update_version.sh
+
+      - name: Commit and open pull request
+        if: steps.check.outputs.needs_update == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          new_tag=$(jq -r '.tag_name' updater/version.json)
+          html_url=$(jq -r '.html_url' updater/version.json)
+          branch="update-version-${new_tag}"
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add updater/version.json index.html
+          git commit -m "Update version to ${new_tag}"
+          git push -u origin "$branch"
+
+          gh pr create \
+            --title "Update version to ${new_tag}" \
+            --body "Automated update: bumps all version references and \`updater/version.json\` to [${new_tag}](${html_url})." \
+            --base main \
+            --head "$branch"
