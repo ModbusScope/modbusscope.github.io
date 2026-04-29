@@ -28,4 +28,8 @@ sed -i "s/Download v[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/Download v${TAG_NAME}/
 sed -i "s/Latest release: v[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]* ([^)]*)/Latest release: v${TAG_NAME} (${MONTH_YEAR})/g" \
   "$REPO_ROOT/index.html"
 
+# Update softwareVersion in JSON-LD structured data
+sed -i "s/\"softwareVersion\": \"[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\"/\"softwareVersion\": \"${TAG_NAME}\"/g" \
+  "$REPO_ROOT/index.html"
+
 echo "Updated to ${TAG_NAME}"
