@@ -15,24 +15,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch latest release
-        id: release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          release=$(gh api repos/ModbusScope/ModbusScope/releases/latest)
-          tag=$(echo "$release"          | jq -r '.tag_name')
-          html_url=$(echo "$release"     | jq -r '.html_url')
-          published_at=$(echo "$release" | jq -r '.published_at')
-          echo "tag=$tag"                   >> "$GITHUB_OUTPUT"
-          echo "html_url=$html_url"         >> "$GITHUB_OUTPUT"
-          echo "published_at=$published_at" >> "$GITHUB_OUTPUT"
-
       - name: Check if update is needed
         id: check
         run: |
           current=$(jq -r '.tag_name' updater/version.json)
-          if [ "$current" != "${{ steps.release.outputs.tag }}" ]; then
+          latest=$(curl -fsSL https://api.github.com/repos/ModbusScope/ModbusScope/releases/latest | jq -r '.tag_name')
+          if [ "$current" != "$latest" ]; then
             echo "needs_update=true" >> "$GITHUB_OUTPUT"
           else
             echo "needs_update=false" >> "$GITHUB_OUTPUT"
@@ -42,17 +30,15 @@ jobs:
         if: steps.check.outputs.needs_update == 'true'
         run: |
           chmod +x scripts/update_version.sh
-          ./scripts/update_version.sh \
-            "${{ steps.release.outputs.tag }}" \
-            "${{ steps.release.outputs.html_url }}" \
-            "${{ steps.release.outputs.published_at }}"
+          ./scripts/update_version.sh
 
       - name: Commit and open pull request
         if: steps.check.outputs.needs_update == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          new_tag="${{ steps.release.outputs.tag }}"
+          new_tag=$(jq -r '.tag_name' updater/version.json)
+          html_url=$(jq -r '.html_url' updater/version.json)
           branch="update-version-${new_tag}"
 
           git config user.name  "github-actions[bot]"
@@ -64,6 +50,6 @@ jobs:
 
           gh pr create \
             --title "Update version to ${new_tag}" \
-            --body "Automated update: bumps all version references and \`updater/version.json\` to [${new_tag}](${{ steps.release.outputs.html_url }})." \
+            --body "Automated update: bumps all version references and \`updater/version.json\` to [${new_tag}](${html_url})." \
             --base main \
             --head "$branch"

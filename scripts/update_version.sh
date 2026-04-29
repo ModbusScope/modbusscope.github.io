@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TAG_NAME="$1"
-HTML_URL="$2"
-PUBLISHED_AT="$3"
-
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+RELEASE=$(curl -fsSL https://api.github.com/repos/ModbusScope/ModbusScope/releases/latest)
+TAG_NAME=$(echo "$RELEASE"    | jq -r '.tag_name')
+HTML_URL=$(echo "$RELEASE"    | jq -r '.html_url')
+PUBLISHED_AT=$(echo "$RELEASE" | jq -r '.published_at')
 
 # Update updater/version.json
 jq \
