@@ -11,7 +11,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-      workflows: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.2
@@ -47,7 +46,8 @@ jobs:
           git checkout -b "$branch"
           git add updater/version.json index.html
           git commit -m "Update version to ${new_tag}"
-          git push -u origin "$branch" --force
+          git push origin --delete "$branch" 2>/dev/null || true
+          git push -u origin "$branch"
 
           gh pr create \
             --title "Update version to ${new_tag}" \
