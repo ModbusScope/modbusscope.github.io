@@ -121,6 +121,7 @@
           Open-source desktop application for real-time logging and visualization
           of Modbus TCP and RTU data. Built for industrial engineers, energy professionals,
           and embedded developers.
+          Supports all register types, 16-bit/32-bit/float data types, combined reads, and exception splitting.
         </p>
 
         <div class="hero__actions">
@@ -244,12 +245,32 @@
           </article>
 
           <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">4x</div>
+            <div class="feature-card__icon" aria-hidden="true">reg</div>
             <h3 class="feature-card__title">All Register Types</h3>
             <p class="feature-card__desc">
               Supports coils, discrete inputs, input registers, and holding registers,
               covering the full Modbus object model. Read and log any combination
               in a single session.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">±32</div>
+            <h3 class="feature-card__title">Flexible Data Types</h3>
+            <p class="feature-card__desc">
+              Decode registers as unsigned or signed integers (16-bit and 32-bit)
+              or 32-bit floats, with configurable byte and word endianness to match
+              any device's memory layout.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">opt</div>
+            <h3 class="feature-card__title">Protocol Optimizations</h3>
+            <p class="feature-card__desc">
+              Combines adjacent register reads into a single Modbus packet to
+              minimize round-trips. On a Modbus exception, the failing range is
+              automatically split so the remaining registers are still collected.
             </p>
           </article>
 
