@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://modbusscope.github.io/">
+  <link rel="canonical" href="https://modbusscope.com/">
   <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin="anonymous">
   <meta name="description"
-        content="Open-source Modbus TCP/RTU data logger and real-time visualizer for Windows and Linux. Log all register types, write custom expressions, and export to CSV.">
+        content="Modbus TCP/RTU data logger and real-time visualizer for Windows and Linux. Visualization core open-source under GPLv3. Log all register types, write custom expressions, and export to CSV.">
   <meta name="keywords"
-        content="Modbus, Modbus TCP, Modbus RTU, data logging, data visualization, industrial automation, open source, Windows, Linux, CSV export, register logging, serial Modbus">
+        content="Modbus, Modbus TCP, Modbus RTU, data logging, data visualization, industrial automation, Windows, Linux, CSV export, register logging, serial Modbus">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ModbusScope">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="ModbusScope - Modbus TCP/RTU Data Logger and Visualizer">
   <meta property="og:description"
-        content="Open-source desktop application for real-time Modbus TCP/RTU data logging and visualization. Windows and Linux. Licensed under GPLv3.">
+        content="Desktop application for real-time Modbus TCP/RTU data logging and visualization. Visualization core open-source under GPLv3. Windows and Linux.">
   <meta property="og:image"
         content="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png">
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
   <meta property="og:image:alt" content="ModbusScope application icon">
-  <meta property="og:url" content="https://modbusscope.github.io/">
+  <meta property="og:url" content="https://modbusscope.com/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ModbusScope - Modbus TCP/RTU Data Logger and Visualizer">
   <meta name="twitter:description"
-        content="Open-source desktop application for real-time Modbus TCP/RTU data logging and visualization. Windows and Linux. Licensed under GPLv3.">
+        content="Desktop application for real-time Modbus TCP/RTU data logging and visualization. Visualization core open-source under GPLv3. Windows and Linux.">
   <meta name="twitter:image"
         content="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png">
   <meta name="twitter:image:alt" content="ModbusScope application icon">
@@ -39,10 +39,10 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "@id": "https://modbusscope.github.io/#software",
+        "@id": "https://modbusscope.com/#software",
         "name": "ModbusScope",
-        "description": "Open-source desktop application for real-time Modbus TCP/RTU data logging and visualization. Supports all register types, custom expressions, and CSV export.",
-        "url": "https://modbusscope.github.io/",
+        "description": "Desktop application for real-time Modbus TCP/RTU data logging and visualization. Visualization core open-source under GPLv3. Supports all register types, custom expressions, and CSV export.",
+        "url": "https://modbusscope.com/",
         "downloadUrl": "https://github.com/ModbusScope/ModbusScope/releases/latest",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": ["Windows", "Linux"],
@@ -52,17 +52,17 @@
         "image": "https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png",
         "screenshot": "https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/modbusscope_demo.gif",
         "author": {
-          "@id": "https://modbusscope.github.io/#organization"
+          "@id": "https://modbusscope.com/#organization"
         },
         "publisher": {
-          "@id": "https://modbusscope.github.io/#organization"
+          "@id": "https://modbusscope.com/#organization"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://modbusscope.github.io/#organization",
+        "@id": "https://modbusscope.com/#organization",
         "name": "ModbusScope",
-        "url": "https://modbusscope.github.io/",
+        "url": "https://modbusscope.com/",
         "logo": "https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png",
         "sameAs": [
           "https://github.com/ModbusScope/ModbusScope"
@@ -91,6 +91,7 @@
       <nav class="nav__links" aria-label="Main navigation">
         <a href="https://modbusscope.readthedocs.io" class="nav__link" target="_blank" rel="noopener">Docs</a>
         <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:info@modbusscope.com" class="nav__link">Contact</a>
         <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
            class="btn btn-primary nav__cta" target="_blank" rel="noopener">
           Download
@@ -99,6 +100,18 @@
 
     </div>
   </header>
+
+  <!-- ANNOUNCEMENT -->
+  <div class="announcement">
+    <div class="announcement__inner">
+      <span class="announcement__label">News</span>
+      <p class="announcement__text">
+        Read about the future and next steps of ModbusScope —
+        <a class="announcement__link" href="https://github.com/ModbusScope/ModbusScope/discussions/481"
+           target="_blank" rel="noopener">join the discussion on GitHub</a>.
+      </p>
+    </div>
+  </div>
 
   <main>
 
@@ -118,9 +131,10 @@
         <p class="hero__tagline">Visual Modbus Data Logging</p>
 
         <p class="hero__subtitle">
-          Open-source desktop application for real-time logging and visualization
-          of Modbus TCP and RTU data. Built for industrial engineers, energy professionals,
+          Desktop application for real-time logging and visualization
+          of Modbus TCP and RTU data. The visualization core is open-source under GPLv3. Built for industrial engineers, energy professionals,
           and embedded developers.
+          Supports all register types, 16-bit/32-bit/float data types, combined reads, and exception splitting.
         </p>
 
         <div class="hero__actions">
@@ -141,7 +155,7 @@
         <div class="hero__badges">
           <span class="badge">Windows</span>
           <span class="badge">Linux</span>
-          <span class="badge">Open Source</span>
+          <span class="badge">Open-Source Core</span>
           <span class="badge">GPLv3</span>
         </div>
 
@@ -244,12 +258,32 @@
           </article>
 
           <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">4x</div>
+            <div class="feature-card__icon" aria-hidden="true">reg</div>
             <h3 class="feature-card__title">All Register Types</h3>
             <p class="feature-card__desc">
               Supports coils, discrete inputs, input registers, and holding registers,
               covering the full Modbus object model. Read and log any combination
               in a single session.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">±32</div>
+            <h3 class="feature-card__title">Flexible Data Types</h3>
+            <p class="feature-card__desc">
+              Decode registers as unsigned or signed integers (16-bit and 32-bit)
+              or 32-bit floats, with configurable byte and word endianness to match
+              any device's memory layout.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">opt</div>
+            <h3 class="feature-card__title">Protocol Optimizations</h3>
+            <p class="feature-card__desc">
+              Combines adjacent register reads into a single Modbus packet to
+              minimize round-trips. On a Modbus exception, the failing range is
+              automatically split so the remaining registers are still collected.
             </p>
           </article>
 
@@ -332,7 +366,7 @@
         <p class="get-started__note">
           Windows and Linux
           &nbsp;&middot;&nbsp;
-          GPLv3
+          Core GPLv3
           &nbsp;&middot;&nbsp;
           <a href="https://github.com/ModbusScope/ModbusScope"
              target="_blank" rel="noopener"
@@ -369,16 +403,17 @@
            class="footer__link" target="_blank" rel="noopener">Report a Bug</a>
         <a href="https://github.com/ModbusScope/ModbusScope/blob/master/LICENSE"
            class="footer__link" target="_blank" rel="noopener">License</a>
+        <a href="mailto:info@modbusscope.com" class="footer__link">Contact</a>
       </nav>
 
       <p class="footer__legal">
-        Released under the
+        Visualization core released under the
         <a href="https://github.com/ModbusScope/ModbusScope/blob/master/LICENSE"
            class="footer__link" target="_blank" rel="noopener">GNU General Public License v3.0</a>.
       </p>
 
       <p class="footer__copyright">
-        &copy; 2026 ModbusScope contributors. Latest release: v4.2.2 (April 2026).
+        &copy; 2026 ModbusScope contributors. Developed by Synvis. Latest release: v4.2.2 (April 2026).
       </p>
 
     </div>
