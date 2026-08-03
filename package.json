@@ -3,11 +3,19 @@
   "private": true,
   "scripts": {
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "html-validate index.html",
-    "lint:css": "stylelint styles.css"
+    "lint:html": "html-validate index.html features/index.html pricing/index.html downloads/index.html",
+    "lint:css": "stylelint styles.css",
+    "start": "http-server . -p 8080 -s",
+    "test:links": "linkinator http://localhost:8080/ http://localhost:8080/features/ http://localhost:8080/pricing/ http://localhost:8080/downloads/ http://localhost:8080/partials/header.html http://localhost:8080/partials/footer.html --recurse --skip \"^(?!http://localhost)\"",
+    "test:e2e": "playwright test",
+    "test": "start-server-and-test start http://localhost:8080 \"npm run test:links && npm run test:e2e\""
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "html-validate": "^11.6.2",
+    "http-server": "^14.1.1",
+    "linkinator": "^6.3.0",
+    "start-server-and-test": "^2.1.5",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0"
   }
