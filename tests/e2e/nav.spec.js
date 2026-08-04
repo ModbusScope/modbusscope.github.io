@@ -25,13 +25,17 @@ for (const { path, label } of pages) {
 
   test(`${label} page: no console errors`, async ({ page }) => {
     // The Cloudflare analytics beacon is a third-party script outside this site's control;
-    // its reachability isn't what this test verifies (our own include.js/injection logic is).
+    // its reachability isn't what this test verifies (our own include.js/injection logic is),
+    // and its failure mode varies by environment (blocked, CORS, timeout). Stub it with an
+    // empty, successful response so its own network calls never run and never log errors.
+    await page.route('https://static.cloudflareinsights.com/**', (route) =>
+      route.fulfill({ status: 200, contentType: 'application/javascript', body: '' })
+    );
+
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     page.on('console', (message) => {
-      if (message.type() === 'error' && !message.location().url.includes('cloudflareinsights.com')) {
-        errors.push(message.text());
-      }
+      if (message.type() === 'error') errors.push(message.text());
     });
 
     await page.goto(path);

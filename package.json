@@ -14,8 +14,8 @@
     "@playwright/test": "^1.62.1",
     "html-validate": "^11.6.2",
     "http-server": "^14.1.1",
-    "linkinator": "^6.3.0",
-    "start-server-and-test": "^2.1.5",
+    "linkinator": "^8.0.3",
+    "start-server-and-test": "^3.0.12",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0"
   }
