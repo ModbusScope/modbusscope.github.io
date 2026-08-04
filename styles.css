@@ -298,8 +298,10 @@ a:hover {
 /* === NAV === */
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: var(--color-primary-light);
   border-bottom: 1px solid var(--color-border);
@@ -353,6 +355,14 @@ a:hover {
 
 .nav__link:hover {
   color: var(--color-primary);
+}
+
+.nav__link--external::after {
+  content: "\2197";
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 0.75em;
+  opacity: 0.7;
 }
 
 .nav__cta {
