@@ -8,14 +8,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "updater/version.json": "updater/version.json" });
 
-  eleventyConfig.addGlobalData("release", () => {
-    const data = JSON.parse(fs.readFileSync("updater/version.json", "utf8"));
-    const published = new Date(data.published_at);
-    return {
-      ...data,
-      monthYear: published.toLocaleDateString("en-US", { month: "long", year: "numeric" }),
-    };
-  });
+  eleventyConfig.addGlobalData("release", () =>
+    JSON.parse(fs.readFileSync("updater/version.json", "utf8"))
+  );
 
   return {
     dir: {

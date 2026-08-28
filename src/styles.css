@@ -289,12 +289,6 @@ a:hover {
   margin-top: var(--space-4);
 }
 
-.platform-downloads__cta {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--space-10);
-}
-
 /* === NAV === */
 
 .nav {
@@ -322,7 +316,7 @@ a:hover {
   gap: var(--space-3);
   color: var(--color-text);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   text-decoration: none;
 }
 
@@ -349,7 +343,7 @@ a:hover {
 .nav__link {
   color: var(--color-text-muted);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   transition: color var(--transition-fast);
 }
 
@@ -366,7 +360,7 @@ a:hover {
 }
 
 .nav__cta {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
   padding: var(--space-2) var(--space-5);
 }
 
@@ -618,7 +612,9 @@ a:hover {
 
 /* === FEATURES === */
 
-.features {
+.features,
+.pricing-tiers,
+.platform-downloads {
   background: var(--color-bg);
   padding: var(--space-20) 0;
 }
@@ -829,7 +825,7 @@ a:hover {
 .footer {
   background: var(--color-bg-dark);
   color: var(--color-text-light);
-  padding: var(--space-12) 0 var(--space-8);
+  padding: var(--space-8) 0 var(--space-5);
 }
 
 .footer__inner {
@@ -837,7 +833,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
 }
 
 .footer__brand {
@@ -886,7 +882,7 @@ a:hover {
   font-size: var(--font-size-xs);
   color: rgb(255 255 255 / 30%);
   border-top: 1px solid rgb(255 255 255 / 8%);
-  padding-top: var(--space-4);
+  padding-top: var(--space-3);
   width: 100%;
   text-align: center;
 }
