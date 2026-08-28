@@ -14,9 +14,9 @@ custom expressions, statistical analysis, and CSV export. Available for Windows 
 
 A daily GitHub Actions workflow (`.github/workflows/update-version.yml`) compares the version in
 `updater/version.json` against the latest release on GitHub. When a new release is detected,
-`scripts/update_version.sh` updates `updater/version.json` and patches all version strings in
-`index.html`, `partials/footer.html`, and `downloads/index.html`, then the workflow opens a pull
-request automatically.
+`scripts/update_version.sh` updates `updater/version.json`; every version string shown on the site
+is templated from that file at build time, so no other files need patching. The workflow then opens
+a pull request automatically.
 
 ## Development
 

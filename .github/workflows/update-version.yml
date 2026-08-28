@@ -51,6 +51,6 @@ jobs:
 
           gh pr create \
             --title "Update version to ${new_tag}" \
-            --body "Automated update: bumps all version references and \`updater/version.json\` to [${new_tag}](${html_url})." \
+            --body "Automated update: bumps \`updater/version.json\` to [${new_tag}](${html_url}); templates pick up the new version at build time." \
             --base main \
             --head "$branch" || true

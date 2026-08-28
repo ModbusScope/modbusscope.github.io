@@ -19,10 +19,15 @@
     </button>
 
     <nav class="nav__links" id="primary-nav" aria-label="Main navigation">
-      <a href="/" class="nav__link">Home</a>
-      <a href="/features/" class="nav__link">Features</a>
-      <a href="/pricing/" class="nav__link">Pricing</a>
-      <a href="/downloads/" class="nav__link">Downloads</a>
+      {%- set navLinks = [
+        { href: "/", label: "Home" },
+        { href: "/features/", label: "Features" },
+        { href: "/pricing/", label: "Pricing" },
+        { href: "/downloads/", label: "Downloads" }
+      ] -%}
+      {%- for link in navLinks %}
+      <a href="{{ link.href }}" class="nav__link{% if page.url == link.href %} nav__link--active{% endif %}"{% if page.url == link.href %} aria-current="page"{% endif %}>{{ link.label }}</a>
+      {%- endfor %}
       <a href="https://modbusscope.readthedocs.io" class="nav__link nav__link--external" target="_blank" rel="noopener">Docs</a>
       <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link nav__link--external" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:info@modbusscope.com" class="nav__link nav__link--external">Contact</a>

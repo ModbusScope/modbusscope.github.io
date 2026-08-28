@@ -18,22 +18,4 @@ jq \
   "$REPO_ROOT/updater/version.json" > "$REPO_ROOT/updater/version.json.tmp"
 mv "$REPO_ROOT/updater/version.json.tmp" "$REPO_ROOT/updater/version.json"
 
-# Derive "Month YYYY" for footer
-MONTH_YEAR=$(date -d "$PUBLISHED_AT" '+%B %Y')
-
-# Replace all X.Y.Z version occurrences across pages that reference the version
-VERSION_FILES=(
-  "$REPO_ROOT/index.html"
-  "$REPO_ROOT/partials/footer.html"
-  "$REPO_ROOT/downloads/index.html"
-)
-
-for f in "${VERSION_FILES[@]}"; do
-  sed -i "s/[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*/${TAG_NAME}/g" "$f"
-done
-
-# Update the month/year suffix in the footer release line (shared partial)
-sed -i "s/Latest release: v${TAG_NAME} ([^)]*)/Latest release: v${TAG_NAME} (${MONTH_YEAR})/g" \
-  "$REPO_ROOT/partials/footer.html"
-
 echo "Updated to ${TAG_NAME}"
