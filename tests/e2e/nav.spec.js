@@ -8,7 +8,7 @@ const pages = [
   { path: '/downloads/', label: 'Downloads' },
 ];
 
-const placeholderPages = ['/features/', '/pricing/', '/downloads/'];
+const placeholderPages = ['/pricing/', '/downloads/'];
 
 for (const { path, label } of pages) {
   test(`${label} page: header and footer inject`, async ({ page }) => {
