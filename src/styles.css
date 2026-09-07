@@ -276,7 +276,8 @@ a:hover {
   color: var(--color-text);
 }
 
-.pricing-tiers__note {
+.pricing-tiers__note,
+.services__note {
   margin-top: var(--space-10);
 }
 
@@ -562,6 +563,7 @@ a:hover {
 
 .features,
 .pricing-tiers,
+.services,
 .platform-downloads {
   background: var(--color-bg);
   padding: var(--space-20) 0;

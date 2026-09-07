@@ -4,10 +4,10 @@
   "scripts": {
     "build": "eleventy",
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "npm run build && html-validate _site/index.html _site/features/index.html _site/pricing/index.html _site/downloads/index.html",
+    "lint:html": "npm run build && html-validate _site/index.html _site/features/index.html _site/pricing/index.html _site/downloads/index.html _site/services/index.html",
     "lint:css": "stylelint src/styles.css",
     "start": "eleventy --serve --port=8080",
-    "test:links": "linkinator http://localhost:8080/ http://localhost:8080/features/ http://localhost:8080/pricing/ http://localhost:8080/downloads/ --recurse --skip \"^(?!http://localhost)\"",
+    "test:links": "linkinator http://localhost:8080/ http://localhost:8080/features/ http://localhost:8080/pricing/ http://localhost:8080/downloads/ http://localhost:8080/services/ --recurse --skip \"^(?!http://localhost)\"",
     "test:e2e": "playwright test",
     "test": "start-server-and-test start http://localhost:8080 \"npm run test:links && npm run test:e2e\""
   },
