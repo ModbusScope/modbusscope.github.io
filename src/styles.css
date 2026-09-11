@@ -239,7 +239,8 @@ a:hover {
 /* === PAGE HEADER (subpages) === */
 
 .page-header {
-  background: #e9ecef;
+  background: linear-gradient(160deg, var(--color-primary-light) 0%, var(--color-bg) 65%);
+  border-bottom: 1px solid var(--color-border);
   padding: var(--space-16) 0 var(--space-10);
   text-align: center;
 }
@@ -667,6 +668,13 @@ a:hover {
 .platform-downloads {
   background: var(--color-bg);
   padding: var(--space-20) 0;
+}
+
+.page-header + .features,
+.page-header + .pricing,
+.page-header + .services,
+.page-header + .platform-downloads {
+  padding-top: var(--space-10);
 }
 
 .features__grid {
