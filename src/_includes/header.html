@@ -29,9 +29,11 @@
       {%- for link in navLinks %}
       <a href="{{ link.href }}" class="nav__link{% if page.url == link.href %} nav__link--active{% endif %}"{% if page.url == link.href %} aria-current="page"{% endif %}>{{ link.label }}</a>
       {%- endfor %}
-      <a href="https://modbusscope.readthedocs.io" class="nav__link nav__link--external" target="_blank" rel="noopener">Docs</a>
-      <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link nav__link--external" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:info@modbusscope.com" class="nav__link nav__link--external">Contact</a>
+      <div class="nav__external">
+        <a href="https://modbusscope.readthedocs.io" class="nav__link nav__link--external" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link nav__link--external" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:info@modbusscope.com" class="nav__link nav__link--external">Contact</a>
+      </div>
       <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
          class="btn btn-primary nav__cta" target="_blank" rel="noopener">
         Download
