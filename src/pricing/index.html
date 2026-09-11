@@ -1,8 +1,8 @@
 ---
 layout: base.html
 title: "Pricing - ModbusScope"
-description: "Pricing plans for ModbusScope, the Modbus TCP/RTU data logger and visualizer. Preview of upcoming plans for the desktop application."
-ogDescription: "Pricing plans for ModbusScope, the Modbus TCP/RTU data logger and visualizer."
+description: "Pricing for ModbusScope, the Modbus TCP/RTU data logger and visualizer: free to start, one-time purchase to unlock unlimited devices, registers, and gateway/bridge support."
+ogDescription: "ModbusScope pricing: free to start, one-time purchase to unlock unlimited devices, registers, and gateway/bridge support."
 ---
   <main>
 
@@ -11,57 +11,77 @@ ogDescription: "Pricing plans for ModbusScope, the Modbus TCP/RTU data logger an
       <div class="container">
         <h1 class="section-title">Pricing</h1>
         <p class="section-subtitle">
-          Simple, transparent plans for every team.
+          Free to start. One-time purchase to unlock unlimited scale.
         </p>
       </div>
     </section>
 
     <div class="container">
       <div class="placeholder-notice">
-        <span class="placeholder-notice__label">Coming soon</span>
+        <span class="placeholder-notice__label">Beta</span>
         <p class="placeholder-notice__text">
-          This page is a work-in-progress preview &mdash; the plans and prices below are
-          placeholder content and not final.
+          ModbusScope v5.0.x is currently in beta.
+          <a href="mailto:info@modbusscope.com">Email us</a> for a free temporary license.
         </p>
       </div>
     </div>
 
-    <!-- PRICING TIERS -->
-    <section class="pricing-tiers">
+    <!-- PRICING -->
+    <section class="pricing">
       <div class="container">
-        <div class="features__grid">
-
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">0</div>
-            <h3 class="feature-card__title">Community</h3>
-            <p class="feature-card__desc">
-              Free forever. Full access to the open-source visualization core: real-time logging,
-              graphing, and CSV export for a single Modbus connection.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">Pro</div>
-            <h3 class="feature-card__title">Pro</h3>
-            <p class="feature-card__desc">
-              Everything in Community, plus multiple simultaneous connections, custom expressions,
-              and priority support. Pricing to be announced.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-card__icon" aria-hidden="true">Ent</div>
-            <h3 class="feature-card__title">Enterprise</h3>
-            <p class="feature-card__desc">
-              Everything in Pro, plus deployment support and dedicated assistance for larger teams.
-              Contact us for details.
-            </p>
-          </article>
-
+        <div class="pricing-table__wrapper">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Free</th>
+                <th scope="col" class="pricing-table__cell--highlight">Paid (one-time)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Price</th>
+                <td class="pricing-table__cell--price">Free</td>
+                <td class="pricing-table__cell--highlight pricing-table__cell--price">TBD</td>
+              </tr>
+              <tr>
+                <th scope="row">Number of devices</th>
+                <td>2</td>
+                <td class="pricing-table__cell--highlight">Unlimited (*)</td>
+              </tr>
+              <tr>
+                <th scope="row">Number of registers</th>
+                <td>5</td>
+                <td class="pricing-table__cell--highlight">Unlimited (*)</td>
+              </tr>
+              <tr>
+                <th scope="row">Gateway/Bridge</th>
+                <td>No</td>
+                <td class="pricing-table__cell--highlight">Yes</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <p class="section-subtitle pricing-tiers__note">
-          Have questions about upcoming plans?
+        <p class="pricing__footnote">
+          (*) Limited only by your system&rsquo;s performance, not an artificial cap.
+        </p>
+
+        <h2 class="pricing__included-title">Included in both plans</h2>
+        <ul class="pricing__included">
+          <li class="pricing__included-item">Real-Time Visualization</li>
+          <li class="pricing__included-item">Modbus TCP and RTU</li>
+          <li class="pricing__included-item">Multiple Devices</li>
+          <li class="pricing__included-item">Custom Expressions</li>
+          <li class="pricing__included-item">Statistical Analysis</li>
+          <li class="pricing__included-item">CSV Export</li>
+          <li class="pricing__included-item">All Register Types</li>
+          <li class="pricing__included-item">Flexible Data Types</li>
+          <li class="pricing__included-item">Protocol Optimizations</li>
+        </ul>
+
+        <p class="section-subtitle pricing__note">
+          Have questions about pricing?
           <a href="mailto:info@modbusscope.com">Contact us</a>.
         </p>
       </div>
