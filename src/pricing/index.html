@@ -1,8 +1,8 @@
 ---
 layout: base.html
 title: "Pricing - ModbusScope"
-description: "Pricing for ModbusScope, the Modbus TCP/RTU data logger and visualizer: free to start, one-time purchase to unlock unlimited devices, registers, and gateway/bridge support."
-ogDescription: "ModbusScope pricing: free to start, one-time purchase to unlock unlimited devices, registers, and gateway/bridge support."
+description: "ModbusScope pricing: free for hobby and evaluation (2 devices, 5 registers). Pro unlocks unlimited devices and registers, plus Gateway/Bridge."
+ogDescription: "ModbusScope pricing: free for hobby and evaluation. Pro unlocks unlimited devices and registers, plus Gateway/Bridge."
 ---
   <main>
 
@@ -11,17 +11,17 @@ ogDescription: "ModbusScope pricing: free to start, one-time purchase to unlock 
       <div class="container">
         <h1 class="section-title">Pricing</h1>
         <p class="section-subtitle">
-          Free to start. One-time purchase to unlock unlimited scale.
+          Free for hobby and evaluation. Pro unlocks unlimited devices and registers, plus Gateway/Bridge.
         </p>
       </div>
     </section>
 
     <div class="container">
       <div class="placeholder-notice">
-        <span class="placeholder-notice__label">Beta</span>
+        <span class="placeholder-notice__label">Limited time</span>
         <p class="placeholder-notice__text">
-          ModbusScope v5.0.x is currently in beta.
-          <a href="mailto:info@modbusscope.com">Email us</a> for a free temporary license.
+          For a limited time, we're giving out free Pro licenses to testers in exchange for feedback.
+          <a href="mailto:info@modbusscope.com?subject=ModbusScope%20test%20license%20request&amp;body=Hi%2C%0A%0AI%27d%20like%20a%20free%20license%20to%20test%20ModbusScope%20Pro%20features%20and%20share%20feedback.%0A%0AName%3A%0AUse%20case%3A">Request one</a>.
         </p>
       </div>
     </div>
@@ -34,25 +34,36 @@ ogDescription: "ModbusScope pricing: free to start, one-time purchase to unlock 
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">Free</th>
-                <th scope="col" class="pricing-table__cell--highlight">Paid (one-time)</th>
+                <th scope="col">
+                  Free
+                  <span class="pricing-table__sublabel">Hobby and evaluation</span>
+                </th>
+                <th scope="col" class="pricing-table__cell--highlight">
+                  Pro
+                  <span class="pricing-table__sublabel">Professional use</span>
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">Price</th>
                 <td class="pricing-table__cell--price">Free</td>
-                <td class="pricing-table__cell--highlight pricing-table__cell--price">TBD</td>
+                <td class="pricing-table__cell--highlight pricing-table__cell--price">
+                  Free for testers
+                  <span class="pricing-table__note">
+                    One-time purchase from v5.1. Price announced before then.
+                  </span>
+                </td>
               </tr>
               <tr>
                 <th scope="row">Number of devices</th>
                 <td>2</td>
-                <td class="pricing-table__cell--highlight">Unlimited (*)</td>
+                <td class="pricing-table__cell--highlight">Unlimited</td>
               </tr>
               <tr>
                 <th scope="row">Number of registers</th>
                 <td>5</td>
-                <td class="pricing-table__cell--highlight">Unlimited (*)</td>
+                <td class="pricing-table__cell--highlight">Unlimited</td>
               </tr>
               <tr>
                 <th scope="row">Gateway/Bridge</th>
@@ -60,30 +71,62 @@ ogDescription: "ModbusScope pricing: free to start, one-time purchase to unlock 
                 <td class="pricing-table__cell--highlight">Yes</td>
               </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td>
+                  <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
+                     class="btn btn-outline" target="_blank" rel="noopener">Download</a>
+                </td>
+                <td class="pricing-table__cell--highlight">
+                  <a href="mailto:info@modbusscope.com?subject=ModbusScope%20test%20license%20request&amp;body=Hi%2C%0A%0AI%27d%20like%20a%20free%20license%20to%20test%20ModbusScope%20Pro%20features%20and%20share%20feedback.%0A%0AName%3A%0AUse%20case%3A"
+                     class="btn btn-primary">Request test license</a>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </div>
 
-        <p class="pricing__footnote">
-          (*) Limited only by your system&rsquo;s performance, not an artificial cap.
+        <p class="pricing__caption">
+          Pro has no artificial caps. Your hardware and network are the only limit.
         </p>
 
-        <h2 class="pricing__included-title">Included in both plans</h2>
-        <ul class="pricing__included">
-          <li class="pricing__included-item">Real-Time Visualization</li>
-          <li class="pricing__included-item">Modbus TCP and RTU</li>
-          <li class="pricing__included-item">Multiple Devices</li>
-          <li class="pricing__included-item">Custom Expressions</li>
-          <li class="pricing__included-item">Statistical Analysis</li>
-          <li class="pricing__included-item">CSV Export</li>
-          <li class="pricing__included-item">All Register Types</li>
-          <li class="pricing__included-item">Flexible Data Types</li>
-          <li class="pricing__included-item">Protocol Optimizations</li>
-        </ul>
-
-        <p class="section-subtitle pricing__note">
-          Have questions about pricing?
-          <a href="mailto:info@modbusscope.com">Contact us</a>.
+        <p class="pricing__text">
+          Both include real-time visualization, Modbus TCP and RTU, custom expressions,
+          statistical analysis and CSV export.
+          <a href="/features/">See all features</a>.
         </p>
+
+        <h2 class="pricing__title">Open core</h2>
+        <p class="pricing__text">
+          The ModbusScope core is open source and developed on GitHub. Pro features are built on top of it.
+          <a href="https://github.com/ModbusScope/ModbusScope" target="_blank" rel="noopener">View the source</a>.
+        </p>
+
+        <h2 class="pricing__title">Questions</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">What do I get with Free?</summary>
+            <p class="faq__answer">
+              Up to 2 devices and 5 registers, with all core features. It is meant for hobby
+              projects and for evaluating ModbusScope.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">What happens when v5.1 is released?</summary>
+            <p class="faq__answer">
+              Pro features require a paid license. Free stays available with its limits.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">How much will Pro cost?</summary>
+            <p class="faq__answer">
+              The price is not set yet. It will be announced before v5.1.
+              <a href="mailto:info@modbusscope.com?subject=ModbusScope%20Pro%20pricing">Email us</a>
+              if you want to hear about it.
+            </p>
+          </details>
+        </div>
       </div>
     </section>
 

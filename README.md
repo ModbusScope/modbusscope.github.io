@@ -6,9 +6,9 @@ Landing page for [ModbusScope](https://github.com/ModbusScope/ModbusScope).
 
 This repository is the source for the [ModbusScope landing page](https://modbusscope.github.io/).
 
-[ModbusScope](https://github.com/ModbusScope/ModbusScope) is an open-source desktop application
+[ModbusScope](https://github.com/ModbusScope/ModbusScope) is an open-core desktop application
 for real-time Modbus TCP/RTU data logging and visualization. It supports all register types,
-custom expressions, statistical analysis, and CSV export. Available for Windows and Linux under GPLv3.
+custom expressions, statistical analysis, and CSV export. Available for Windows and Linux.
 
 ### Automated version updates
 
