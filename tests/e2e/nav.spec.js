@@ -52,6 +52,13 @@ for (const path of placeholderPages) {
   });
 }
 
+test('terms page renders all license clauses', async ({ page }) => {
+  await page.goto('/terms/');
+  await expect(page.locator('#site-header .nav__brand')).toBeVisible();
+  await expect(page.locator('#site-footer .footer__copyright')).toBeVisible();
+  await expect(page.locator('.terms__item')).toHaveCount(10);
+});
+
 test('mobile hamburger menu opens and closes', async ({ page }) => {
   await page.setViewportSize({ width: 480, height: 800 });
   await page.goto('/');

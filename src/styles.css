@@ -432,6 +432,38 @@ a:hover {
   line-height: var(--line-height-loose);
 }
 
+/* === TERMS === */
+
+.terms__list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  counter-reset: terms;
+}
+
+.terms__item {
+  counter-increment: terms;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terms__title {
+  margin: 0 0 var(--space-2);
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.terms__title::before {
+  content: counter(terms) ". ";
+}
+
+.terms__text {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-loose);
+}
+
 /* === NAV === */
 
 .nav {
@@ -743,6 +775,7 @@ a:hover {
 .features,
 .pricing,
 .services,
+.terms,
 .platform-downloads {
   background: var(--color-bg);
   padding: var(--space-20) 0;
@@ -751,6 +784,7 @@ a:hover {
 .page-header + .features,
 .page-header + .pricing,
 .page-header + .services,
+.page-header + .terms,
 .page-header + .platform-downloads {
   padding-top: var(--space-10);
 }
