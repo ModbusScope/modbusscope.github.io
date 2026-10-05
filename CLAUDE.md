@@ -18,7 +18,7 @@ npm run build      # compile src/ to _site/
 npm run lint       # run both html-validate and stylelint
 npm run lint:html  # builds, then lints the generated _site/*.html documents
 npm run lint:css   # lints src/styles.css
-npm start          # build + serve the site locally at http://localhost:8080 (Eleventy dev server, live-reloads)
+npm start          # build + serve the site locally at http://localhost:8081 (Eleventy dev server, live-reloads)
 npm test           # serve the site, then run the link checker and Playwright smoke tests
 ```
 
