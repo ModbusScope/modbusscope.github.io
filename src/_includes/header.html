@@ -23,8 +23,7 @@
         { href: "/", label: "Home" },
         { href: "/features/", label: "Features" },
         { href: "/pricing/", label: "Pricing" },
-        { href: "/services/", label: "Services" },
-        { href: "/downloads/", label: "Downloads" }
+        { href: "/services/", label: "Services" }
       ] -%}
       {%- for link in navLinks %}
       <a href="{{ link.href }}" class="nav__link{% if page.url == link.href %} nav__link--active{% endif %}"{% if page.url == link.href %} aria-current="page"{% endif %}>{{ link.label }}</a>
@@ -34,8 +33,8 @@
         <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link nav__link--external" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:info@modbusscope.com" class="nav__link nav__link--external">Contact</a>
       </div>
-      <a href="https://github.com/ModbusScope/ModbusScope/releases/latest"
-         class="btn btn-primary nav__cta" target="_blank" rel="noopener">
+      <a href="/downloads/"
+         class="btn btn-primary nav__cta">
         Download
       </a>
     </nav>
