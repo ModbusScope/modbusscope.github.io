@@ -1,8 +1,8 @@
 ---
 layout: base.html
 title: "Features - ModbusScope"
-description: "A closer look at ModbusScope's Modbus TCP/RTU data logging and visualization features, register support, and protocol optimizations."
-ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and visualization features."
+description: "See how ModbusScope helps teams monitor industrial data, analyze live signals, and build a clearer picture of device behavior."
+ogDescription: "See how ModbusScope helps teams monitor industrial data and analyze live signals in real time."
 ---
   <main>
 
@@ -11,7 +11,7 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
       <div class="container">
         <h1 class="section-title">Features</h1>
         <p class="section-subtitle">
-          A closer look at what ModbusScope can do.
+          Real-time visibility for industrial monitoring and field data analysis.
         </p>
       </div>
     </section>
@@ -23,21 +23,19 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
 
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">~</div>
-            <h3 class="feature-card__title">Real-Time Visualization</h3>
+            <h3 class="feature-card__title">Real-Time Visibility</h3>
             <p class="feature-card__desc">
-              Watch your Modbus registers update live on an interactive graph.
-              Identify transients and trends as they happen, with automatic or
-              sliding-window axis scaling.
+              Watch device data update live on an interactive graph and spot changes as they happen.
+              Automatic scaling and smooth range updates help you focus on what matters in the moment.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">IP</div>
-            <h3 class="feature-card__title">Modbus TCP and RTU</h3>
+            <h3 class="feature-card__title">Modbus Today, More Protocols Ahead</h3>
             <p class="feature-card__desc">
-              Connect over Ethernet via Modbus TCP or directly to serial hardware
-              via Modbus RTU. Configure multiple connections with independent
-              settings for each.
+              Modbus is the current focus, with a roadmap that expands into additional industrial protocol coverage.
+              The platform is designed to grow with your monitoring needs.
             </p>
           </article>
 
@@ -45,9 +43,8 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
             <div class="feature-card__icon" aria-hidden="true">Nx</div>
             <h3 class="feature-card__title">Multiple Devices</h3>
             <p class="feature-card__desc">
-              Poll multiple Modbus slaves simultaneously. Mix slave IDs and
-              connection types in a single session. Ideal for comparing sensors
-              across a bus or network.
+              Examine more than one device in the same session, compare readings, and correlate signals
+              from different points in a system or network.
             </p>
           </article>
 
@@ -55,9 +52,8 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
             <div class="feature-card__icon" aria-hidden="true">f(x)</div>
             <h3 class="feature-card__title">Custom Expressions</h3>
             <p class="feature-card__desc">
-              Write user-defined formulas to combine, scale, or convert register
-              values. Apply unit conversions, compute power from voltage and
-              current, or implement any derived quantity.
+              Build formulas to combine, scale, convert, and compare values. Create derived metrics,
+              convert units, and model the signals that matter to your process.
             </p>
           </article>
 
@@ -65,9 +61,8 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
             <div class="feature-card__icon" aria-hidden="true">min</div>
             <h3 class="feature-card__title">Statistical Analysis</h3>
             <p class="feature-card__desc">
-              Drag markers to bracket a time range and instantly read min, max,
-              average, median, and slope statistics. Zoom with the scroll wheel
-              to focus on any interval.
+              Drag markers across a time range and instantly calculate min, max, average, median, and slope.
+              Zoom in on any interval and make decisions from evidence instead of guesswork.
             </p>
           </article>
 
@@ -75,19 +70,17 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
             <div class="feature-card__icon" aria-hidden="true">CSV</div>
             <h3 class="feature-card__title">CSV Export</h3>
             <p class="feature-card__desc">
-              Export the full logged dataset to CSV for post-processing in Excel,
-              Python, MATLAB, or any analysis tool. All register channels are
-              included with timestamps.
+              Export recorded time series to CSV for analysis in Excel, Python, MATLAB, or any tool you already use.
+              Keep timestamps and channel data together for downstream review.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">reg</div>
-            <h3 class="feature-card__title">All Register Types</h3>
+            <h3 class="feature-card__title">Signal Coverage</h3>
             <p class="feature-card__desc">
-              Supports coils, discrete inputs, input registers, and holding registers,
-              covering the full Modbus object model. Read and log any combination
-              in a single session.
+              Work with the register and signal types you need today, with a monitoring workflow built to handle
+              the broader industrial data picture as support expands.
             </p>
           </article>
 
@@ -95,19 +88,17 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
             <div class="feature-card__icon" aria-hidden="true">±32</div>
             <h3 class="feature-card__title">Flexible Data Types</h3>
             <p class="feature-card__desc">
-              Decode registers as unsigned or signed integers (16-bit and 32-bit)
-              or 32-bit floats, with configurable byte and word endianness to match
-              any device's memory layout.
+              Decode values as integers and floats with configurable byte and word ordering so you can match
+              the real-world device layout you are looking at.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-card__icon" aria-hidden="true">opt</div>
-            <h3 class="feature-card__title">Protocol Optimizations</h3>
+            <h3 class="feature-card__title">Reliable Acquisition</h3>
             <p class="feature-card__desc">
-              Combines adjacent register reads into a single Modbus packet to
-              minimize round-trips. On a Modbus exception, the failing range is
-              automatically split so the remaining registers are still collected.
+              Keep logging stable even when a device or data range acts up. Automatic read optimization and
+              fault handling help preserve the rest of the signal set.
             </p>
           </article>
 
@@ -119,7 +110,7 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
     <section class="protocol-band">
       <div class="container protocol-band__inner">
 
-        <p class="protocol-band__label">Protocol and Register Support</p>
+        <p class="protocol-band__label">Protocol coverage</p>
 
         <div class="protocol-band__items">
 
@@ -132,35 +123,28 @@ ogDescription: "A closer look at ModbusScope's Modbus TCP/RTU data logging and v
 
           <div class="protocol-item">
             <span class="protocol-item__tag">RTU</span>
-            <span class="protocol-item__text">Modbus RTU (Serial)</span>
+            <span class="protocol-item__text">Modbus RTU</span>
           </div>
 
           <div class="protocol-divider" aria-hidden="true"></div>
 
           <div class="protocol-item">
-            <span class="protocol-item__tag">0x</span>
-            <span class="protocol-item__text">Coils</span>
+            <span class="protocol-item__tag">104</span>
+            <span class="protocol-item__text">IEC 104 roadmap</span>
           </div>
 
           <div class="protocol-divider" aria-hidden="true"></div>
 
           <div class="protocol-item">
-            <span class="protocol-item__tag">1x</span>
-            <span class="protocol-item__text">Discrete Inputs</span>
+            <span class="protocol-item__tag">B</span>
+            <span class="protocol-item__text">BACnet roadmap</span>
           </div>
 
           <div class="protocol-divider" aria-hidden="true"></div>
 
           <div class="protocol-item">
-            <span class="protocol-item__tag">3x</span>
-            <span class="protocol-item__text">Input Registers</span>
-          </div>
-
-          <div class="protocol-divider" aria-hidden="true"></div>
-
-          <div class="protocol-item">
-            <span class="protocol-item__tag">4x</span>
-            <span class="protocol-item__text">Holding Registers</span>
+            <span class="protocol-item__tag">fx</span>
+            <span class="protocol-item__text">Custom logic</span>
           </div>
 
         </div>
