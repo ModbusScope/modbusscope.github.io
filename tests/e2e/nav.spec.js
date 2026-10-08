@@ -17,7 +17,9 @@ for (const { path, label } of pages) {
     await expect(page.locator('#site-footer .footer__copyright')).toBeVisible();
   });
 
-  test(`${label} page: only the ${label} nav link is active`, async ({ page }) => {
+  // Downloads is a standalone CTA button, not a nav link, so it has no active state.
+  const testActive = path === '/downloads/' ? test.skip : test;
+  testActive(`${label} page: only the ${label} nav link is active`, async ({ page }) => {
     await page.goto(path);
     const activeLinks = page.locator('.nav__link--active');
     await expect(activeLinks).toHaveCount(1);
