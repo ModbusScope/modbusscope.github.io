@@ -1,0 +1,43 @@
+<header class="nav">
+  <div class="container nav__inner">
+
+    <a href="/" class="nav__brand">
+      <img
+        src="https://raw.githubusercontent.com/ModbusScope/ModbusScope/master/resources/icon/icon-256x256.png"
+        alt="ModbusScope logo"
+        class="nav__logo"
+        width="32"
+        height="32">
+      <span class="nav__name">ModbusScope</span>
+    </a>
+
+    <button type="button" class="nav__toggle" aria-label="Toggle navigation menu"
+            aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+
+    <nav class="nav__links" id="primary-nav" aria-label="Main navigation">
+      {%- set navLinks = [
+        { href: "/", label: "Home" },
+        { href: "/features/", label: "Features" },
+        { href: "/pricing/", label: "Pricing" },
+        { href: "/services/", label: "Services" }
+      ] -%}
+      {%- for link in navLinks %}
+      <a href="{{ link.href }}" class="nav__link{% if page.url == link.href %} nav__link--active{% endif %}"{% if page.url == link.href %} aria-current="page"{% endif %}>{{ link.label }}</a>
+      {%- endfor %}
+      <div class="nav__external">
+        <a href="https://modbusscope.readthedocs.io" class="nav__link nav__link--external" target="_blank" rel="noopener">Docs</a>
+        <a href="https://github.com/ModbusScope/ModbusScope" class="nav__link nav__link--external" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:info@modbusscope.com" class="nav__link nav__link--external">Contact</a>
+      </div>
+      <a href="/downloads/"
+         class="btn btn-primary nav__cta">
+        Download
+      </a>
+    </nav>
+
+  </div>
+</header>

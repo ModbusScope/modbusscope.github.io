@@ -2,12 +2,21 @@
   "name": "modbusscope-site",
   "private": true,
   "scripts": {
+    "build": "eleventy",
     "lint": "npm run lint:html && npm run lint:css",
-    "lint:html": "html-validate index.html",
-    "lint:css": "stylelint styles.css"
+    "lint:html": "npm run build && html-validate _site/index.html _site/features/index.html _site/pricing/index.html _site/downloads/index.html _site/services/index.html",
+    "lint:css": "stylelint src/styles.css",
+    "start": "eleventy --serve --port=8081",
+    "test:links": "linkinator http://localhost:8081/ http://localhost:8081/features/ http://localhost:8081/pricing/ http://localhost:8081/downloads/ http://localhost:8081/services/ --recurse --skip \"^(?!http://localhost)\"",
+    "test:e2e": "playwright test",
+    "test": "start-server-and-test start http://localhost:8081 \"npm run test:links && npm run test:e2e\""
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@playwright/test": "^1.62.1",
     "html-validate": "^11.6.2",
+    "linkinator": "^8.0.3",
+    "start-server-and-test": "^3.0.12",
     "stylelint": "^17.14.1",
     "stylelint-config-standard": "^40.0.0"
   }

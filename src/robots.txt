@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Host: modbusscope.com
+
+Sitemap: https://modbusscope.com/sitemap.xml

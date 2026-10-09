@@ -44,13 +44,13 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add updater/version.json index.html
+          git add -u
           git commit -m "Update version to ${new_tag}"
           git push origin --delete "$branch" 2>/dev/null || true
           git push -u origin "$branch"
 
           gh pr create \
             --title "Update version to ${new_tag}" \
-            --body "Automated update: bumps all version references and \`updater/version.json\` to [${new_tag}](${html_url})." \
+            --body "Automated update: bumps \`updater/version.json\` to [${new_tag}](${html_url}); templates pick up the new version at build time." \
             --base main \
             --head "$branch" || true
